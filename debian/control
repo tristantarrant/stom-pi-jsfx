@@ -1,0 +1,23 @@
+Source: stom-pi-jsfx
+Section: sound
+Priority: optional
+Maintainer: Dataforte <info@dataforte.net>
+Build-Depends: debhelper (>= 13),
+               pkg-config
+Standards-Version: 4.6.2
+Homepage: https://github.com/dataforte/stom-pi-jsfx
+
+Package: stom-pi-jsfx
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Suggests: stom-pi
+Description: JSFX plugin bridge for Rustyfoot
+ Provides the JSFX-to-LV2 bridge tooling for the Rustyfoot pedalboard
+ platform. Allows JSFX effects (REAPER's scripted audio plugins) to be
+ loaded by mod-host as native LV2 plugins with auto-generated control
+ ports and modgui.
+ .
+ Includes a shared LV2 wrapper binary (jsfx-wrapper.so) that is symlinked
+ into generated LV2 bundles, and a scanner tool (stom-pi-jsfx-scan) that
+ introspects JSFX files and generates wrapper metadata.
